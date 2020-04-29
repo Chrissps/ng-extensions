@@ -3,10 +3,12 @@
   [style.height]="height"
   class="ng-extension-flex-row-space-between ng-extension-no-select ng-extension-list-element">
   <div class="ng-extension-flex-column ng-extension-list-element-text-container">
-    <div class="ng-extension-list-element-title">
+    <div class="ng-extension-list-element-title"
+         [style.color]="listElement.textColorTitle">
       <span>{{listElement.title}}</span>
     </div>
-    <div class="ng-extension-list-element-content">
+    <div class="ng-extension-list-element-content"
+         [style.color]="listElement.textColorContent">
       <span>{{listElement.content}}</span>
     </div>
   </div>

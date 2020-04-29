@@ -3,14 +3,18 @@ export class NgListElement {
   private _id: number;
   private _title: string;
   private _content: string;
+  private _textColorTitle: string;
+  private _textColorContent: string;
   private _show: boolean;
   private _actionItems: Array<NgListElementAction>;
   private _data: any;
 
-  constructor(id: number = 0, title: string = '', content: string = '', show: boolean = true, actionItems: Array<NgListElementAction> = new Array<NgListElementAction>(), data: any = null) {
+  constructor(id: number = 0, title: string = '', content: string = '', textColorTitle = '#212121', textColorContent = '#212121', show: boolean = true, actionItems: Array<NgListElementAction> = new Array<NgListElementAction>(), data: any = null) {
     this._id = id;
     this._title = title;
     this._content = content;
+    this._textColorTitle = textColorTitle;
+    this._textColorContent = textColorContent;
     this._show = show;
     this._actionItems = actionItems;
     this._data = data;
@@ -67,6 +71,21 @@ export class NgListElement {
 
   set data(value: any) {
     this._data = value;
+  }
+  get textColorTitle(): string {
+    return this._textColorTitle;
+  }
+
+  set textColorTitle(value: string) {
+    this._textColorTitle = value;
+  }
+
+  get textColorContent(): string {
+    return this._textColorContent;
+  }
+
+  set textColorContent(value: string) {
+    this._textColorContent = value;
   }
 }
 
