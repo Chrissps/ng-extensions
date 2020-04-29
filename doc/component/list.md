@@ -79,6 +79,7 @@ export class MyComponent {
 |id|`number`|`0`|Id of object. Gets set automatically when using NgExtensionListProvider.|
 |title|`string`|`''`|Title of the list collection.|
 |expand|`boolean`|`true`|List collection is expanded.|
+|showExpander|`boolean`|`true`|Show the expander of the list collection.|
 |show|`boolean`|`true`|Collection is visible|
 |backgroundColor|`string`|`#ffffff`|Background color of collection|
 |backgroundColorTitle|`string`|`#00E676`|Background color of collection title|

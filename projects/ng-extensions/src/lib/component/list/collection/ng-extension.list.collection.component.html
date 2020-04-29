@@ -8,12 +8,14 @@
     class="ng-extension-flex-row-space-between ng-extension-list-collection-head">
     <span>{{listCollection.title}}</span>
     <button
-      *ngIf="listCollection.expand" (click)="listCollection.expand = false"
+      *ngIf="listCollection.expand && listCollection.showExpander"
+      (click)="listCollection.expand = false"
       mat-icon-button color="primary">
       <mat-icon>keyboard_arrow_up</mat-icon>
     </button>
     <button
-      *ngIf="!listCollection.expand" (click)="listCollection.expand = true"
+      *ngIf="!listCollection.expand && listCollection.showExpander"
+      (click)="listCollection.expand = true"
       mat-icon-button color="primary">
       <mat-icon>keyboard_arrow_down</mat-icon>
     </button>

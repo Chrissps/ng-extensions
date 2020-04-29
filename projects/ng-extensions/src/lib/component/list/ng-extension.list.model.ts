@@ -146,16 +146,18 @@ export class NgListCollection {
   private _id: number;
   private _title: string;
   private _expand: boolean;
+  private _showExpander: boolean;
   private _show: boolean;
   private _backgroundColor: string;
   private _backgroundColorTitle: string;
   private _colorTitle: string;
   private _listElements: Array<NgListElement>;
 
-  constructor(id: number = 0, title: string = '', expand: boolean = true, show: boolean = true, backgroundColor: string = '#ffffff', backgroundColorTitle: string = '#00E676', colorTitle: string = '#212121', listElements: Array<NgListElement> = new Array<NgListElement>()) {
+  constructor(id: number = 0, title: string = '', expand: boolean = true, showExpander: boolean = true, show: boolean = true, backgroundColor: string = '#ffffff', backgroundColorTitle: string = '#00E676', colorTitle: string = '#212121', listElements: Array<NgListElement> = new Array<NgListElement>()) {
     this._id = id;
     this._title = title;
     this._expand = expand;
+    this._showExpander = expand;
     this._show = show;
     this._backgroundColor = backgroundColor;
     this._backgroundColorTitle = backgroundColorTitle;
@@ -226,6 +228,14 @@ export class NgListCollection {
 
   set listElements(value: Array<NgListElement>) {
     this._listElements = value;
+  }
+
+  get showExpander(): boolean {
+    return this._showExpander;
+  }
+
+  set showExpander(value: boolean) {
+    this._showExpander = value;
   }
 
   public addListElement(listElement: NgListElement): void {
