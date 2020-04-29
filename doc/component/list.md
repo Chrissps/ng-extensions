@@ -57,6 +57,8 @@ export class MyComponent {
 |id|`number`|`0`|Id of the element. Gets set automatically when using a NgListCollection.|
 |title|`string`|`''`|Title of the list element. Can be null.|
 |content|`string`|`''`|Content of the list element. Can be null.|
+|textColorTitle|`string`|`'#212121'`|Font color of the title of the list element. Can be null.|
+|textColorContent|`string`|`'#212121'`|Font color of the content of the list element. Can be null.|
 |show|`boolean`|`true`|Element is visible.|
 |actionItems|`Array<NgListElementAction>`|`[]`|Holds visible element actions|
 |data|`any`|`null`|Contains custom data which can be needed when action gets executed|
