@@ -180,7 +180,7 @@ export class NgListCollection {
     this._id = id;
     this._title = title;
     this._expand = expand;
-    this._showExpander = expand;
+    this._showExpander = showExpander;
     this._show = show;
     this._backgroundColor = backgroundColor;
     this._backgroundColorTitle = backgroundColorTitle;
